@@ -1,11 +1,11 @@
 
 
  var bio = {
- 	"name" : "Himanshu Salhotra",
+ 	"Name" : "Himanshu Salhotra",
  	"role": " Web Developer",
      "contacts" : {
 
-     	"location" : "Jammu & Kashmir",
+     	"location" : "new york",
      	"mobile"  : "901-161-254",
      	"email" : "salhotrahimanshu@yahoo.com",
      	"github" : "salhotra8",
@@ -13,7 +13,7 @@
          },
 
 
-     "welcomemessage" : "Go Win Barcelona Fc the treble this season...Forca Barca...lionel messi...!",
+     "welcomemessage" : "Go Win Barcelona Fc treble this season...Forca Barca.....lionel messi.....!",
       "skills" : ["Innovative","Chef", "Very Fast","Programer","Engineer","Gamer", "Singer", "Dancer"],  
       "bioPic": "images/me.jpg"
 
@@ -25,22 +25,26 @@
  var school = {
 
 
- 	"schools" : [
+ 	"school" : [
  	{
- 	  "name" : "nagbani",
- 	  "location": "jammu",
- 	  "degree": "2013"
+ 	  "name" : "MHAC Nagbani",
+ 	  "location": "Bombay,IN",
+ 	  "degree": "2013",
+ 	  "Major" : "Non-Medical"
     },
     {
-    	"name" : "mietjammu",
- 	  "location": "jammu",
- 	  "degree": "2017"
+    	"name" : "MietJammu",
+ 	  "location": "Texas,USA",
+ 	  "degree": "2017",
+ 	  "Major" : "ECE"
     }
          ],
      "onlinecourse" : [
         {
-        	"name" : "javascript",
-        	"date": "14 feb 1995"
+        	"name" : "Javascript Crash Course",
+        	"date": "14 feb 1995",
+        	"location" : "Udacity",
+        	"url": "https://in.udacity.com/?utm_source=google&utm_medium=cpc&utm_campaign=bQAvD_BwE"
         }
 
      ]
@@ -51,15 +55,19 @@
   var work = {
      "jobs"  : [
        {
-       	"name": "nala shop",
+       	"name": "Nala shop",
        	"designation": "cook boy",
-       	"description" : "this my first worst job that i have evr done in my life. after this go to bad job but not worse like it"
+       	"date" : "12 januray , 1995 - 2004",
+       	"location" : "delhi",
+       	"description" : "this my first worst job that i have evr done in my life. after this go to bad job but not worse like it. an age of instant communications, job applicants are often surprised -- perhaps even overwhelmed -- by requests for a writing sample during the search process."
 
        },
        {
-         "name": "jind shop",
+         "name": "Jhind shop",
+         "date" : "16 May , 2005 - 2020",
        	"designation": "water boy",
-       	"description" : "this my second bad job that i have ever done in my life. after this i became i useless person "
+       	"location": "jammu",
+       	"description" : "this my second bad job that i have ever done in my life. after this i became i useless person. an age of instant communications, job applicants are often surprised -- perhaps even overwhelmed -- by requests for a writing sample during the search process."
        }  
 
      ]
@@ -71,15 +79,20 @@
 
 
  var projects = {
-
+    
+    "projects": [
+    {
 
 	"title": "Mind Control Drone",
-	"Semester": "8th",
-	"description": " this was my first ever project that i have made at college. i put so much hardwork on this project but i never was acknowledge.this was my faith.To hell with those teacher of miet that do this partiality",
+	"date": "8 july , 2017",
+	"description": " this was my first ever project that i have made at college. i put so much hardwork on this project but i never was acknowledge.this was my faith.To hell with those teacher of miet that do this partiality.this is my faith of all the time in my college doing nothing. i let my talent to go in vain.",
 	"pic": [
-		"https://www.google.co.in/imgres?imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FDSaqWrTI7_w%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DDSaqWrTI7_w&docid=aAVjUc_T6TEstM&tbnid=m-XVAckNhWMDiM%3A&vet=10ahUKEwjMo7bL7qzVAhUDy7wKHdw_D4kQMwhbKC0wLQ..i&w=1280&h=720&bih=678&biw=1301&q=mind%20control%20drone&ved=0ahUKEwjMo7bL7qzVAhUDy7wKHdw_D4kQMwhbKC0wLQ&iact=mrc&uact=80",
-		"https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjetYPs7qzVAhVHwLwKHSZOCYQQjRwIBw&url=http%3A%2F%2Fblog.digitalcamerawarehouse.com.au%2F2016%2F09%2Fphotokina-2016-new-gopro-hero5-black.html&psig=AFQjCNH_Np2FecfF7GR92ZLraKClLQEA7g&ust=1501361775274130"
 
+	  "images/stadium.jpg",
+	  "images/newstadium.jpg"	
+
+	]
+      }
 	]
 
   };
@@ -94,7 +107,7 @@ $("#header").prepend(FormattedRole);
 
 
 
-var FormattedName = HTMLheaderName.replace("%data%",bio.name);
+var FormattedName = HTMLheaderName.replace("%data%",bio.Name);
 $("#header").prepend(FormattedName);
 
 
@@ -147,4 +160,157 @@ Formattedskill = HTMLskills.replace("%data%",bio.skills[6]);
 Formattedskill = HTMLskills.replace("%data%",bio.skills[7]);
  $("#skills").append(Formattedskill);
 
+};
+
+
+function works() 
+{
+
+for(job in work.jobs)
+{
+
+	$("#workExperience").append(HTMLworkStart);
+
+	Formattedjobname = HTMLworkEmployer.replace("%data%",work.jobs[job].name);
+    
+    Formattedjoblevel = HTMLworkTitle.replace("%data%",work.jobs[job].designation);
+   
+   Formattednameandlevel = Formattedjobname + Formattedjoblevel;
+
+   $(".work-entry:last").append(Formattednameandlevel);
+
+
+   Formatteddate = HTMLworkDates.replace("%data%",work.jobs[job].date);
+    $(".work-entry:last").append(Formatteddate);
+
+
+    Formatteddescription = HTMLworkDescription.replace("%data%",work.jobs[job].description);
+    $(".work-entry:last").append(Formatteddescription);
+
+
 }
+
+};
+
+    works();
+
+
+    $(document).click(function(loc) {
+    var x = loc.pageX;
+    var y = loc.pageY;
+     logClicks(x,y);
+});
+
+
+
+function inName(Name)
+{
+	Name = Name.trim().split(" ");
+	console.log(Name);
+	Name[1]=Name[1].toUpperCase();
+    Name[0]=Name[0].slice(0,1).toUpperCase() + Name[0].slice(1).toLowerCase();
+    return  Name[0]+ " " + Name[1] ;
+
+}
+
+    $("#main").append(internationalizeButton); 
+
+
+    
+
+    projects.display = function()
+
+    {
+
+     for(project in projects.projects)
+     {
+
+      $("#projects").append(HTMLprojectStart);
+
+      Formattedtitle = HTMLprojectTitle.replace("%data%",projects.projects[project].title);
+     $(".project-entry:last").append(Formattedtitle);
+
+      Formatteddate = HTMLprojectDates.replace("%data%",projects.projects[project].date);
+     $(".project-entry:last").append(Formatteddate);
+     
+     Formatteddescription = HTMLprojectDescription.replace("%data%",projects.projects[project].description);
+     $(".project-entry:last").append(Formatteddescription);
+
+     if(projects.projects[project].pic.length>0)
+     {	
+
+     	Formattedimage = HTMLprojectImage.replace("%data%",projects.projects[project].pic[0]);
+     $(".project-entry:last").append(Formattedimage);
+
+     Formattedimage = HTMLprojectImage.replace("%data%",projects.projects[project].pic[1]);
+     $(".project-entry:last").append(Formattedimage);
+
+
+     }	
+
+ }
+}
+
+projects.display();
+
+
+     function education() 
+     {
+
+     	$("#education").append(HTMLschoolStart);
+
+
+      Formattedschoolname = HTMLschoolName.replace("%data%",school.school[0].name);
+     $(".education-entry:last").append(Formattedschoolname);
+
+     Formattedschoollocation = HTMLschoolLocation.replace("%data%",school.school[0].location);
+     $(".education-entry:last").append(Formattedschoollocation);
+
+     Formattedschooldegree = HTMLschoolDegree.replace("%data%",school.school[0].degree);
+     $(".education-entry:last").append(Formattedschooldegree);
+
+
+     Formattedschoolmajor = HTMLschoolMajor.replace("%data%",school.school[0].Major);
+     $(".education-entry:last").append(Formattedschoolmajor);
+
+
+
+     Formattedschoolname = HTMLschoolName.replace("%data%",school.school[1].name);
+     $(".education-entry:last").append(Formattedschoolname);
+
+     Formattedschoollocation = HTMLschoolLocation.replace("%data%",school.school[1].location);
+     $(".education-entry:last").append(Formattedschoollocation);
+
+     Formattedschooldegree = HTMLschoolDegree.replace("%data%",school.school[1].degree);
+     $(".education-entry:last").append(Formattedschooldegree);
+
+
+     Formattedschoolmajor = HTMLschoolMajor.replace("%data%",school.school[1].Major);
+     $(".education-entry:last").append(Formattedschoolmajor);
+
+     if (school.onlinecourse.length>0)
+     {
+     $("#education").append(HTMLonlineClasses);
+
+     Formattedonlinecoursename = HTMLonlineTitle.replace("%data%",school.onlinecourse[0].name);
+     $("#education").append(Formattedonlinecoursename);
+
+     Formattedonlinecoursedate = HTMLonlineDates.replace("%data%",school.onlinecourse[0].date);
+     $("#education").append(Formattedonlinecoursedate);
+
+
+     Formattedonlinecourselocation = HTMLonlineSchool.replace("%data%",school.onlinecourse[0].location);
+     $("#education").append(Formattedonlinecourselocation);
+
+     Formattedonlinecourseurl = HTMLonlineURL.replace("%data%",school.onlinecourse[0].url);
+     $("#education").append(Formattedonlinecourseurl);
+
+      }
+
+     }
+
+     education();
+
+
+
+ $("#mapDiv").append(googleMap);
