@@ -96,7 +96,7 @@ a {
   font-style: italic;
   font-size: 18px;
   color: #f3f3f3;
-  line-height: 58px;
+  line-height: 28px;
 }
 
 #skills-h3 {
@@ -159,16 +159,16 @@ ul {
 .biopic {
   float: left;
   padding: 10px;
-  width: 310px;
+  width: 300px;
   display: none;
 }
 
 img {
-  padding: 50px;
+  padding: 10px;
 }
 
 span {
-  padding: 5px;
+  padding: 15px;
 }
 
 #lets-connect {
@@ -208,7 +208,7 @@ span {
 }
 
 #mapDiv {
-  height: 470px;
+  height: 500px;
   width: 100%;
   padding-bottom: 5%;
 }
