@@ -302,7 +302,7 @@ projects.display();
      Formattedonlinecourselocation = HTMLonlineSchool.replace("%data%",school.onlinecourse[0].location);
      $("#education").append(Formattedonlinecourselocation);
 
-     Formattedonlinecourseurl = HTMLonlineURL.replace("%data%",school.onlinecourse[0].url);
+     Formattedonlinecourseurl = HTMLonlineURL.replace("%data%",school.onlinecourse[0].url).replace("#", school.onlinecourse[0].url);
      $("#education").append(Formattedonlinecourseurl);
 
       }
@@ -314,3 +314,4 @@ projects.display();
 
 
  $("#mapDiv").append(googleMap);
+
